@@ -1,17 +1,12 @@
 #include "../include/MainWindow.h"
 
 #include <QClipboard>
-#include <QIcon>
 #include <cmath>
 #include <map>
-#include <qcoreapplication.h>
 #include <vector>
 
 MainWindow::MainWindow() {
   this->setFixedSize(521, 441);
-  QIcon icon;
-  icon.addFile(QString::fromUtf8("Documents/C++/EasyGearBox/Logo.ico"), QSize(), QIcon::Normal, QIcon::Off);
-  this->setWindowIcon(icon);
 
   this->numBoxLine = new QLineEdit(QString::fromUtf8("№"), this);
   this->numBoxLine->setAlignment(Qt::AlignCenter);
@@ -48,7 +43,7 @@ MainWindow::MainWindow() {
   this->addButtonGearBox = new QPushButton(this);
   this->addButtonGearBox->setGeometry(QRect(227, 10, 25, 25));
   this->addButtonGearBox->setText(QString::fromUtf8("+"));
-  this->addButtonGearBox->setStyleSheet("text-align: top");
+  this->addButtonGearBox->setStyleSheet(QString::fromUtf8("text-align: top"));
   connect(this->addButtonGearBox, &QPushButton::clicked, this->gearBoxFrame,
           &GearBoxPanel::addGearBox);
 
@@ -91,13 +86,13 @@ MainWindow::MainWindow() {
 
   this->genButton = new QPushButton(QString::fromUtf8("Gen"), this);
   this->genButton->setGeometry(205, 381, 50, 50);
-  this->genButton->setStyleSheet("font-size: 18px");
+  this->genButton->setStyleSheet(QString::fromUtf8("font-size: 18px"));
   QObject::connect(this->genButton, &QPushButton::clicked, this->dial,
                    &QDialog::show);
 
   this->copyButton = new QPushButton(QString::fromUtf8("Copy Gears"), this);
   this->copyButton->setGeometry(265, 381, 246, 50);
-  this->copyButton->setStyleSheet("font-size: 18px");
+  this->copyButton->setStyleSheet(QString::fromUtf8("font-size: 18px"));
   QObject::connect(this->copyButton, &QPushButton::clicked, this,
                    &MainWindow::copy);
 
@@ -124,10 +119,10 @@ MainWindow::~MainWindow() {
   delete this->genBoxButton;
   delete this->gearBoxFrame;
   delete this->gearFrame;
-  delete this->dial;
   delete this->minGearText;
   delete this->maxGearText;
   delete this->genButton;
+  delete this->dial;
   for (int i = 0; i < this->numExampleBox; i++)
     delete[] this->exampleBox[i];
   delete[] this->exampleBox;
@@ -165,7 +160,7 @@ void MainWindow::copy() {
       numBox = this->gearFrame->getNumBox();
 
   for (int i = 0; i < numBox; i++) {
-    result.push_back('{');
+    result.push_back(('{'));
     for (int j = 0; j < numGear; j++)
       result.push_back((gears[j][i] + ',')); // gears[j][i], ','
     if (result.back() == ',')

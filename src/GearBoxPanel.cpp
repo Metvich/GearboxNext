@@ -5,7 +5,8 @@ GearBoxPanel::GearBoxPanel(QWidget *parent) : QFrame(parent) {}
 GearBoxPanel::~GearBoxPanel() { removeEndRangeGearBox(0); }
 
 void GearBoxPanel::addGearBox() {
-  if (this->gearBoxes.size() > 11) return;
+  if (this->gearBoxes.size() > 11)
+    return;
   this->gearBoxes.push_back(new MyGearInWidget(
       this->gearBoxes.size() * 27 + 2, this->gearBoxes.size() + 1, this));
   this->gearBoxes.back()->myShow();
@@ -36,7 +37,8 @@ void GearBoxPanel::addGearBoxFromArray(const std::vector<uint32_t> &result,
 
 void GearBoxPanel::removeGearBox(MyGearInWidget *gearBox) {
   auto it = this->gearBoxes.begin();
-  while (it != this->gearBoxes.end() && (*it) != gearBox) ++it;
+  while (it != this->gearBoxes.end() && (*it) != gearBox)
+    ++it;
   ++it;
 
   while (it != this->gearBoxes.end()) {
@@ -60,7 +62,8 @@ void GearBoxPanel::removeEndRangeGearBox(uint32_t start) {
 }
 
 void GearBoxPanel::setAllOne() {
-  for (auto it : this->gearBoxes) it->setOne();
+  for (auto it : this->gearBoxes)
+    it->setOne();
 }
 
 bool GearBoxPanel::checkCorec() {
@@ -104,7 +107,7 @@ MyGearInWidget::MyGearInWidget(int y, int n, GearBoxPanel *panel)
   this->deleteButton = new QPushButton(this);
   this->deleteButton->setGeometry(QRect(215, 0, 25, 25));
   this->deleteButton->setText(QString::fromUtf8("-"));
-  this->deleteButton->setStyleSheet("text-align: top");
+  this->deleteButton->setStyleSheet(QString::fromUtf8("text-align: top"));
   QObject::connect(this->deleteButton, &QPushButton::clicked,
                    [panel, this]() { panel->removeGearBox(this); });
 }
@@ -112,7 +115,8 @@ MyGearInWidget::MyGearInWidget(int y, int n, GearBoxPanel *panel)
 MyGearInWidget::~MyGearInWidget() {
   delete this->numBox;
   delete this->deleteButton;
-  for (int i = 0; i < 4; i++) delete this->gear[i];
+  for (int i = 0; i < 4; i++)
+    delete this->gear[i];
   delete[] this->gear;
 }
 

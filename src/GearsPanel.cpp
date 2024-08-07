@@ -9,10 +9,7 @@ GearsPanel::GearsPanel(QLineEdit *countGear, QWidget *parent)
   this->countGear = countGear;
 }
 
-GearsPanel::~GearsPanel() {
-  delete this->scrolledArea;
-  delete this->countGear;
-}
+GearsPanel::~GearsPanel() { delete this->scrolledArea; }
 
 void GearsPanel::addGear(const QString &gear, const QString &ratio) {
   this->gears.push_back(new MyGearOutWidget(this->gears.size() * 27 + 1, gear,
@@ -101,7 +98,7 @@ MyGearOutWidget::MyGearOutWidget(int y, const QString &gear,
   this->deleteButton = new QPushButton(this);
   this->deleteButton->setGeometry(QRect(195, 0, 25, 25));
   this->deleteButton->setText(QString::fromUtf8("-"));
-  this->deleteButton->setStyleSheet("text-align: top");
+  this->deleteButton->setStyleSheet(QString::fromUtf8("text-align: top"));
   QObject::connect(this->deleteButton, &QPushButton::clicked,
                    [panel, this]() { panel->removeGear(this); });
 }
