@@ -32,3 +32,6 @@ Download the GearboxNext-windows.7z archive and unpack anywhere. Launch GearboxN
 4. Open the .sln file.
 5. Build a project using VS.
 6. It will be copied to the Output folder the .exe file and the contents of the lib folder.
+
+-------- ????
+> In the lib .dll folder, the files are taken from qt6-base//bin/ and qt6-base//plugins/
