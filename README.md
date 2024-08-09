@@ -1,50 +1,34 @@
 # GearboxNext 🎉
 
-## Описание
+## Description
 
-Это программа создана для помощи в настройке коробок передач в Stormworks. Она перебирает все комбинации включения коробок передач, сортирует результат и убирает повторяющиеся значения. 
+This program is designed to help you set up gearboxes in Stormworks. It goes through all the combinations of gearboxes, sorts the result and removes duplicate values.
 
-Результатом работы является 2-мерный массив lua. Его использовать можно в этом [контроллере](https://steamcommunity.com/sharedfiles/filedetails/?id=2852692348).
+The result of the work is a 2-dimensional array. It is used in this [controller](https://steamcommunity.com/sharedfiles/filedetails/?id=2852692348).
 
-## Установка
-### Готовые решения
+[User Guide]()
 
-Для Windows скачайте архив GearboxNext-windows.7z и распакуйте в любом месте. Запустите GearboxNext.exe.
+## Installation
+### Ready-made solutions --------------- ???
 
-Для Linux установите qt6-base, скачайте файл GearboxNext и запустите его.
+#### Linux:
+Install qt6-base, Download the GearboxNext file and run it.
 
-### Как скомпилировать
+#### Windows:
+Download the GearboxNext-windows.7z archive and unpack anywhere. Launch GearboxNext.exe.
 
-Linux:
-1. Склонировать репозиторий: `git clone https://github.com/your-username/EasyGearBox.git`
-2. Открыть папку с проектом: `cd GearBoxNext`
-3. Создать папку build и открыть её: `mkdir build && cd build`
-4. Сконфигурировать CMake проект: `cmake -G Ninja ..`
-5. Собрать проект: `ninja`
+### Manual assembly -------------- ???
+#### Linux:
+1. Clone repository: `git clone https://github.com/your-username/EasyGearBox.git`
+2. Open the project folder: `cd GearBoxNext`
+3. Create a build folder and open it: `mkdir build && cd build`
+4. Configure the CMake project: `cmake -G Ninja ..`
+5. Build a project: `ninja`
 
-Windows:
-1. Склонировать репозиторий: `git clone https://github.com/your-username/EasyGearBox.git`
-2. Скачать с [qt6-base-windows](https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_672/qt.qt6.672.win64_msvc2019_64/6.7.2-0-202406110335qtbase-Windows-Windows_10_22H2-MSVC2019-Windows-Windows_10_22H2-X86_64.7z.mirrorlist) и распокавать.
-3. Сконфигурировать проект под Visual Studio 2017 с qt_toolchain файлом
-4. Открыть .sln файл.
-5. Собрать с помощью VS проект.
-
-
-
-
-
-**How to Use:**
------------------
-
-1. **Click on the Generate 🔥 button**: This will launch the gear ratio generator.
-2. **Set Min and Max Gear Ratio 🔄**: Adjust the minimum and maximum gear ratios according to your needs.
-3. **Click Calculate ➡️**: EasyGearBox will generate optimal gear sets based on your input.
-4. **Click Minus 👋** (optional): Remove one of the generated gears from the list.
-5. **Click Copy Gears 📄**: Get ready to paste the Lua code into Stormworks!
-
-**Tips and Tricks:**
-
-* Experiment with different ratio ranges to find the perfect setup for your game.
-* Use the minus button to remove unwanted gear sets and streamline your results.
-
-That's it! EasyGearBox is designed to be simple, intuitive, and powerful. Happy generating, and don't hesitate to reach out if you have any questions or feedback! 💬
+#### Windows:
+1. Clone repository: `git clone https://github.com/your-username/EasyGearBox.git`
+2. Download from [qt6-base-windows](https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_672/qt.qt6.672.win64_msvc2019_64/6.7.2-0-202406110335qtbase-Windows-Windows_10_22H2-MSVC2019-Windows-Windows_10_22H2-X86_64.7z.mirrorlist) and unpack.
+3. Configure a project for Visual Studio 2017 with a qt_toolchain file from qt6-base(*/lib/cmake/Qt6/qt.toolchain.cmake)
+4. Open the .sln file.
+5. Build a project using VS.
+6. It will be copied to the Output folder the .exe file and the contents of the lib folder.
