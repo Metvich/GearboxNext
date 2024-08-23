@@ -12,10 +12,10 @@ The result of the work is a 2-dimensional array. It is used in this [controller]
 ### The assembled solutions
 
 #### Linux:
-Install qt6-base, download the GearboxNext-linux archive.7z and unpack. Launch GearboxNext.
+Install qt6-base, download the [GearboxNext-linux.7z](https://github.com/Metvich/GearboxNext/releases/latest/download/GearboxNext-linux.7z) and unpack. Launch GearboxNext.
 
 #### Windows:
-Download the GearboxNext-windows archive.7z and unpack. Launch GearboxNext.exe .
+Download the [GearboxNext-windows.7z]() and unpack. Launch GearboxNext.exe .
 
 ### Building
 #### Linux:
