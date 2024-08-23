@@ -36,7 +36,7 @@ if (CMAKE_WIN32_EXECUTABLE)
       COMMAND ${CMAKE_COMMAND} -E make_directory ${OUTPUT_DIR}
       COMMAND ${CMAKE_COMMAND} -E make_directory ${OUTPUT_DIR}/platforms
       COMMAND ${CMAKE_COMMAND} -E make_directory ${OUTPUT_DIR}/styles
-      COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_BINARY_DIR}/${PROJECT_NAME}.exe ${OUTPUT_DIR}/${PROJECT_NAME}.exe
+      COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:${PROJECT_NAME}> ${OUTPUT_DIR}/${PROJECT_NAME}.exe
   )
   
   set(OUTPUT_BIN_DLL 
