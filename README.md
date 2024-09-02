@@ -6,7 +6,7 @@ This program is designed to help you set up gearboxes in Stormworks. It goes thr
 
 The result of the work is a 2-dimensional array. It is used in this [controller](https://steamcommunity.com/sharedfiles/filedetails/?id=2852692348).
 
-[User Guide]()
+[User Guide](https://youtu.be/ltSZGTZyRIM)
 
 ## Installation
 ### The assembled solutions
