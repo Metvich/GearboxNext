@@ -1,4 +1,4 @@
-#include "../include/GearBoxPanel.h"
+#include "GearBoxPanel.h"
 
 GearBoxPanel::GearBoxPanel(QWidget *parent) : QFrame(parent) {}
 
