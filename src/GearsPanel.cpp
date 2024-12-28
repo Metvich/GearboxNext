@@ -1,4 +1,4 @@
-#include "../include/GearsPanel.h"
+#include "GearsPanel.h"
 
 GearsPanel::GearsPanel(QLineEdit *countGear, QWidget *parent)
     : QScrollArea(parent) {
