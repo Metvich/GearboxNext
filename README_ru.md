@@ -23,7 +23,7 @@
 #### Linux:
 1. Установите qt6-base для вашего дистрибутива.
 2. Склонировать репозиторий: `git clone https://github.com/Metvich/EasyGearBox.git`
-3. Открыть папку с проектом: `cd GearBoxNext`
+3. Открыть папку с проектом: `cd GearboxNext`
 4. Сконфигурировать проект: `cmake -S . -B build`
 5. Собрать проект: `cmake --build build --config Release`
 6. Установить в выбранное место: `cmake --install build --prefix ./out`
