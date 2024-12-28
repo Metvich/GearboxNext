@@ -21,7 +21,7 @@ Download the [GearboxNext-windows.7z](https://github.com/Metvich/GearboxNext/rel
 #### Linux:
 1. Install qt6-base for your distribution.
 2. Clone repository: `git clone https://github.com/Metvich/EasyGearBox.git`
-3. Open the project folder: `cd GearBoxNext`
+3. Open the project folder: `cd GearboxNext`
 4. Configure the project: `cmake -S . -B build`
 5. Build the project: `cmake --build build --config Release`
 6. Install in the selected location: `cmake --install build --prefix ./out`
